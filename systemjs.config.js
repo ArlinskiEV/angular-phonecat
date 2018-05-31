@@ -5,8 +5,27 @@
     System.config({
       paths: {
         // paths serve as alias
-        'npm:': 'node_modules/'
+        'npm:': '/node_modules/',
+        // 'npm2:': 'https://unpkg.com/',
+        'rxjs*': 'node_modules/rxjs/bundles/Rx.min.js'
+        // 'rxjs*': 'https://unpkg.com/rxjs@5.4.3/bundles/Rx.min.js'
       },
+      // bundles: {
+      //   // "npm:rxjs-system-bundle@5.3.1/Rx.system.js": [
+      //   "npm2:rxjs-system-bundle@5.3.1/Rx.system.js": [
+      //     "rxjs",
+      //     "rxjs/*",
+      //     "rxjs/operator/*",
+      //     "rxjs/observable/*",
+      //     "rxjs/scheduler/*",
+      //     "rxjs/symbol/*",
+      //     "rxjs/add/operator/*",
+      //     "rxjs/add/observable/*",
+      //     "rxjs/util/*"
+      //   ]
+      // },
+
+
       // map tells the System loader where to look for things
       map: {
         'ng-loader': '../src/systemjs-angular-loader.js',
@@ -22,6 +41,7 @@
         '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
         '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
         '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
+
         '@angular/upgrade/static': 'npm:@angular/upgrade/bundles/upgrade-static.umd.js',
 
         '@angular/animations': 'npm:@angular/animations/bundles/animations.umd.js',
@@ -42,7 +62,8 @@
           defaultExtension: 'js'
         },
         rxjs: {
-          defaultExtension: 'js'
+          // defaultExtension: 'js'
+          defaultExtension: false
         },
         'ng2-file-upload': { 
           main: 'ng2-file-upload.js', 
