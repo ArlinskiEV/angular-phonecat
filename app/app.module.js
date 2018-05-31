@@ -17,7 +17,7 @@ var AppModule = /** @class */ (function () {
         this.upgrade = upgrade;
     }
     AppModule.prototype.ngDoBootstrap = function () {
-        this.upgrade.bootstrap(document.documentElement, ['phonecatApp']);
+        this.upgrade.bootstrap(document.getElementById('myapp'), ['phonecatApp']);
     };
     AppModule = __decorate([
         core_1.NgModule({

@@ -11,6 +11,6 @@ import { UpgradeModule } from '@angular/upgrade/static';
 export class AppModule {
   constructor(private upgrade: UpgradeModule) { }
   ngDoBootstrap() {
-    this.upgrade.bootstrap(document.documentElement, ['phonecatApp']);
+    this.upgrade.bootstrap(document.getElementById('myapp'), ['phonecatApp']);
   }
 }
