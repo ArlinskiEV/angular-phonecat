@@ -5,17 +5,15 @@
  */
 (function (global) {
     System.config({
-  
-      // paths serve as alias
-      paths: {
-          'npm:': 'node_modules/'
-      },
+        paths: {
+          // paths serve as alias
+          'npm:': '/node_modules/'
+        },
   
       // map tells the System loader where to look for things
       map: {
-  
-          // our app is within the app folder
-          app: 'app',
+        'ng-loader': '../src/systemjs-angular-loader.js',
+        app: '/app',
   
           // angular bundles
           '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
@@ -27,6 +25,8 @@
           '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
           '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
   
+          '@angular/upgrade/static': 'npm:@angular/upgrade/bundles/upgrade-static.umd.js',
+
           // other libraries
           'rxjs': 'npm:rxjs',
           'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
