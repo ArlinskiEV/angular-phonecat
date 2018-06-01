@@ -18,6 +18,6 @@ class PhoneListController {
 angular.
   module('phoneList').
   component('phoneList', {
-    templateUrl: 'app/phone-list/phone-list.template.html',
+    templateUrl: 'phone-list/phone-list.template.html',
     controller: PhoneListController
   });
