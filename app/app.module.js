@@ -12,20 +12,25 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var static_1 = require("@angular/upgrade/static");
+var http_1 = require("@angular/http");
+var phone_service_1 = require("./core/phone/phone.service");
 var AppModule = /** @class */ (function () {
     function AppModule(upgrade) {
         this.upgrade = upgrade;
     }
     AppModule.prototype.ngDoBootstrap = function () {
         this.upgrade.bootstrap(document.documentElement, ['phonecatApp']);
-        // this.upgrade.bootstrap(document.getElementById('myapp'), ['phonecatApp']);
     };
     AppModule = __decorate([
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
                 static_1.UpgradeModule,
+                http_1.HttpModule,
             ],
+            providers: [
+                phone_service_1.Phone,
+            ]
         }),
         __metadata("design:paramtypes", [static_1.UpgradeModule])
     ], AppModule);
